@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" type="image/png" href="./assets/images/file.png"/>
+  <link rel="icon" type="image/png" href="./assets/images/file.png" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
   <title>EDIE</title>
@@ -20,7 +20,197 @@
   <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
- 
+  <style>
+    /* Configuración general */
+    .left-text,
+    .right-text {
+      display: inline-block;
+      opacity: 0;
+      position: relative;
+    }
+
+    /* Animaciones */
+    @keyframes slideInLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInRight {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Aplicación de las animaciones */
+    .left-text {
+      animation: slideInLeft 1.5s ease-out forwards;
+    }
+
+    .right-text {
+      animation: slideInRight 1.5s ease-out forwards;
+      animation-delay: 0.5s;
+      /* Para que aparezca un poco después */
+    }
+
+    /* Clase base para animar */
+    .animate-logo {
+
+      /* Inicia invisible */
+      transform: translateY(50px);
+      /* Posicionado 50px abajo */
+      transition: all 2s ease-in-out;
+      /* Duración y suavidad */
+    }
+
+    /* Estado activo cuando la animación comienza */
+    .animate-logo.active {
+      opacity: 1;
+      /* Aparece */
+      transform: translateY(0);
+      /* Se mueve a su posición original */
+    }
+
+    #bg-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .main-banner {
+      position: relative;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+
+    .caption {
+      text-align: center;
+      color: white;
+    }
+
+
+    .section.contact {
+      padding: 40px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 20px;
+    }
+
+    .card {
+      text-align: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+      max-width: 100%;
+      max-height: 200px;
+      /* Ajusta el tamaño máximo de la imagen */
+      object-fit: cover;
+      /* Asegura que la imagen se adapte correctamente */
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .row.justify-content-center {
+      display: flex;
+      justify-content: center;
+    }
+
+
+    footer .row {
+      margin: 0;
+      /* Elimina márgenes del row */
+      padding: 0;
+      /* Elimina padding del row */
+    }
+
+    footer .col-sm-6 {
+      padding: 20px;
+      /* Agrega un padding interno a las columnas si es necesario */
+    }
+
+    footer {
+      width: 100%;
+      /* Asegura que el footer ocupe todo el ancho */
+    }
+
+    footer .row {
+      width: 100%;
+      /* Asegura que el row ocupe todo el ancho */
+    }
+
+    .custom-carousel {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .carousel-slide {
+      position: center;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: all 1s ease-in-out;
+    }
+
+    .carousel-slide.active {
+      left: 0;
+      opacity: 1;
+    }
+
+
+    .section.video {
+  padding: 40px 0;
+  background-color: #f8f9fa; /* Fondo claro para resaltar */
+}
+
+.content-block {
+  background: rgba(0, 40, 114, 0.507); /* Fondo del contenido */
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 10px; /* Espaciado entre bloques */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.content-block h4 {
+  font-size: 1.2rem;
+  color: #C44440;
+  margin-bottom: 15px;
+}
+
+.content-block p {
+  font-size: 1rem;
+  color: #fffbfb;
+  line-height: 1.5;
+}
+
+  </style>
+
 </head>
 
 <body>
@@ -28,100 +218,109 @@
 
   <!--header-->
   <header class="main-header clearfix" role="header">
+
     <div class="logo">
       <a href="#"><em><img src="./assets/images/file.png" style="height: 50px;"></em>EDIE</a>
     </div>
+
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-        <li><a href="#section1">Inicio</a></li>
-        <li class="has-submenu"><a href="#section2">Nosotros</a>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="active-menu"><a href="nosotros.html">Nosotros</a></li>
+        <li class="has-submenu"><a href="cursos.html">Cursos</a>
           <ul class="sub-menu">
-            <li><a href="#section2">Who we are?</a></li>
-            <li><a href="#section3">What we do?</a></li>
-            <li><a href="#section3">How it works?</a></li>
-            <li><a href="" rel="sponsored" class="external">External URL</a></li>
+            <li><a href="cursos.html">Principiante</a></li>
+            <li><a href="cursos.html">Intermedio</a></li>
+            <li><a href="cursos.html">Avanzado</a></li>
           </ul>
         </li>
-        <li><a href="#section4">Cursos</a></li>
-        <!-- <li><a href="#section5">Video</a></li> -->
-        <li><a href="#section6">Contacto</a></li>
-        <li><a href="" class="external">External</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <!-- <li><a href="contacto.html">Maestros</a></li> -->
+        <li><a href="#" class="external"><button type="button" class="btn btn-success w-70 "
+              style="height:35px;">WhatsApp</button></a></li>
       </ul>
     </nav>
+
   </header>
 
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
-    <video autoplay muted loop id="bg-video">
-      <source src="assets/images/course-video.mp4" type="video/mp4" />
-    </video>
+    <img src="./assets/images/main-slider-02.jpg" alt="Banner Image" id="bg-image" />
 
-    <div class="video-overlay header-text">
-      <div class="caption">
-        <h6><img src="./assets/images/file.png" style="height: 200px;"></h6>
-        <h2>Escuela de Inglés <em>Especializada</em></h2>
-         <!-- <img src="./assets/images/edie.png" style="height: 300px;"> -->
-        <div class="main-button">
-          <div class="scroll-to-section"><a href="#section2">Contactanos</a></div>
+    <div class="video-overlay header-text ">
+      <div class="custom-carousel">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+          <div class="caption">
+            <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 100px;"></h6>
+            <h2><span class="left-text">Nosotros</span> <span class="right-text"><em></em></span>
+            </h2>
+
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <div class="caption">
+            <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 100px;"></h6>
+            <h2><span class="left-text"></span><span class="right-text"><em>Nosotros</em></span></h2>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+          <div class="caption">
+            <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 100px;"></h6>
+            <h2><span class="left-text">Nosotros</span> <span class="right-text"><em></em></span>
+            </h2>
+
+          </div>
         </div>
       </div>
+
     </div>
   </section>
   <!-- ***** Main Banner Area End ***** -->
 
-
-  <section class="features">
+  <section class="section video" data-section="section5">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-12">
-          <div class="features-post">
-            <div class="features-content">
-              <div class="content-show">
-                <h4><i class="fa fa-pencil"></i>Cursos</h4>
-              </div>
-              <div class="content-hide">
-                <p>Descubre una amplia gama de cursos diseñados para aprender inglés de manera rápida y efectiva. Desde principiantes hasta avanzados, ofrecemos programas dinámicos que se adaptan a tus necesidades y objetivos. Con métodos modernos y profesores certificados, garantizamos un aprendizaje significativo.</p>
-                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
-                  posuere imperdiet.</p>
-                <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
-              </div>
-            </div>
+      <div class="row d-flex justify-content-center text-center text-white">
+        <!-- Bloque 1 -->
+        <div class="col-md-4 text-white">
+          <div class="content-block text-white">
+            <h4><strong>¿Quiénes somos?</strong></h4>
+            <p>
+              EDIE nace a raíz de la necesidad de obtener la competencia del idioma inglés de manera efectiva, y ante la
+              deficiencia que se ha encontrado en distintos lugares, nace el ideal de una escuela que cubra dichas
+              necesidades.
+            </p>
           </div>
         </div>
-        <div class="col-lg-4 col-12">
-          <div class="features-post second-features">
-            <div class="features-content">
-              <div class="content-show">
-                <h4><i class="fa fa-graduation-cap"></i>Clases Online</h4>
-              </div>
-              <div class="content-hide">
-                <p>Estudia desde cualquier lugar con nuestras clases en línea. Disfruta de sesiones en vivo con profesores certificados, herramientas digitales avanzadas y horarios flexibles que se ajustan a tu estilo de vida. ¡Aprender inglés nunca fue tan accesible!</p>
-                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
-                  posuere imperdiet.</p>
-                <div class="scroll-to-section"><a href="#section3">Details</a></div>
-              </div>
-            </div>
+        <!-- Bloque 2 -->
+        <div class="col-md-4">
+          <div class="content-block">
+            <h4><strong>¿Cuál es nuestro programa de estudio?</strong></h4>
+            <p>
+              Manejamos un programa interactivo conversacional con el objetivo de ser autónomo en el idioma, abarcando
+              comprensión lectora, auditiva y estructura gramatical. Consiste en 4 niveles de 5 meses, con proyectos
+              mensuales como presentaciones o entrevistas.
+            </p>
           </div>
         </div>
-        <div class="col-lg-4 col-12">
-          <div class="features-post third-features">
-            <div class="features-content">
-              <div class="content-show">
-                <h4><i class="fa fa-book"></i>Clases Presenciales</h4>
-              </div>
-              <div class="content-hide">
-                <p>Nuestras clases presenciales te sumergen en un ambiente interactivo y motivador. Aprende inglés mientras interactúas directamente con profesores y compañeros, aprovechando materiales exclusivos y prácticas en tiempo real para mejorar tu fluidez.</p>
-                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
-                  posuere imperdiet.</p>
-                <div class="scroll-to-section"><a href="#section4">Read More</a></div>
-              </div>
-            </div>
+        <!-- Bloque 3 -->
+        <div class="col-md-4">
+          <div class="content-block">
+            <h4><strong>¿Cuál es nuestra metodología?</strong></h4>
+            <p>
+              Priorizamos actividades del habla para desarrollar habilidades comunicativas. Utilizamos libros, juegos de
+              mesa y TIC. Los grupos son de máximo 8 alumnos, distribuidos según su nivel.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
+
 
   <section class="section why-us" data-section="section2">
     <div class="container">
@@ -146,8 +345,10 @@
                   </div>
                   <div class="col-md-6">
                     <h4>Educacion Efectiva</h4>
-                    <p>Nuestra metodología de enseñanza combina estrategias innovadoras con prácticas personalizadas para garantizar un aprendizaje efectivo.<a
-                        href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a little donation</a>  Cada lección está diseñada para ayudarte a alcanzar tus metas de manera clara y progresiva, optimizando tu tiempo y esfuerzo.</p>
+                    <p>Nuestra metodología de enseñanza combina estrategias innovadoras con prácticas personalizadas
+                      para garantizar un aprendizaje efectivo.<a href="https://paypal.me/templatemo" target="_parent"
+                        rel="sponsored">a little donation</a> Cada lección está diseñada para ayudarte a alcanzar tus
+                      metas de manera clara y progresiva, optimizando tu tiempo y esfuerzo.</p>
                   </div>
                 </div>
               </article>
@@ -158,7 +359,9 @@
                   </div>
                   <div class="col-md-6">
                     <h4>Maestros Calificados</h4>
-                    <p>Contamos con un equipo de maestros certificados y apasionados por la enseñanza. Su experiencia y compromiso aseguran que cada estudiante reciba la mejor orientación, creando un ambiente de aprendizaje profesional y motivador.</p>
+                    <p>Contamos con un equipo de maestros certificados y apasionados por la enseñanza. Su experiencia y
+                      compromiso aseguran que cada estudiante reciba la mejor orientación, creando un ambiente de
+                      aprendizaje profesional y motivador.</p>
                     <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam
                       felis non ante.</p>
                   </div>
@@ -171,8 +374,10 @@
                   </div>
                   <div class="col-md-6">
                     <h4>Ingles Conversacional</h4>
-                    <p>Domina el inglés conversacional con nuestras dinámicas prácticas. Aprende a comunicarte con fluidez en situaciones cotidianas y profesionales mientras desarrollas confianza y habilidades que marcarán la diferencia en tu vida diaria.<a rel="nofollow"
-                        href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> now.</p>
+                    <p>Domina el inglés conversacional con nuestras dinámicas prácticas. Aprende a comunicarte con
+                      fluidez en situaciones cotidianas y profesionales mientras desarrollas confianza y habilidades que
+                      marcarán la diferencia en tu vida diaria.<a rel="nofollow" href="https://templatemo.com/contact"
+                        target="_parent">contact TemplateMo</a> now.</p>
                   </div>
                 </div>
               </article>
@@ -182,239 +387,6 @@
       </div>
     </div>
   </section>
-
-  <section class="section coming-soon" data-section="section3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7 col-xs-12">
-          <div class="continer centerIt">
-            <div>
-              <h4>Inscribete <em>a cualquiera de nuestros cursos</em> y aprovecha nuestros descuentos</h4>
-              <div class="counter">
-
-                <div class="days">
-                  <div class="value">00</div>
-                  <span>Dias</span>
-                </div>
-
-                <div class="hours">
-                  <div class="value">00</div>
-                  <span>Horas</span>
-                </div>
-
-                <div class="minutes">
-                  <div class="value">00</div>
-                  <span>Minutos</span>
-                </div>
-
-                <div class="seconds">
-                  <div class="value">00</div>
-                  <span>Segundos</span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="right-content">
-            <div class="top-content">
-              <h6>Ponte en contacto con nosotros <em> para mas informacion</em> sobre nuestros cursos</h6>
-            </div>
-            <form id="contact" action="" method="get">
-              <div class="row">
-                <div class="col-md-12">
-                  <fieldset>
-                    <input name="name" type="text" class="form-control" id="name" placeholder="Nombre" required="">
-                  </fieldset>
-                </div>
-                <div class="col-md-12">
-                  <fieldset>
-                    <input name="email" type="text" class="form-control" id="email" placeholder=" Email"
-                      required="">
-                  </fieldset>
-                </div>
-                <div class="col-md-12">
-                  <fieldset>
-                    <input name="phone-number" type="text" class="form-control" id="phone-number"
-                      placeholder="Telefono" required="">
-                  </fieldset>
-                </div>
-                <div class="col-md-12">
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="button">Contactanos</button>
-                  </fieldset>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section courses" data-section="section4">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Nuestros Cursos</h2>
-          </div>
-        </div>
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="assets/images/banner1.jpeg" alt="Course #1">
-            <div class="down-content">
-              <h4>Ingles A1</h4>
-              <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-              <div class="author-image">
-                <img src="assets/images/author-01.png" alt="Author 1">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/banner2.jpeg" alt="Course #2">
-            <div class="down-content">
-              <h4>Ingles B1</h4>
-              <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-              <div class="author-image">
-                <img src="assets/images/author-02.png" alt="Author 2">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/banner3.jpeg" alt="Course #3">
-            <div class="down-content">
-              <h4>Ingles B2</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.
-              </p>
-              <div class="author-image">
-                <img src="assets/images/author-03.png" alt="Author 3">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/banner4.jpeg" alt="Course #4">
-            <div class="down-content">
-              <h4>Ingles C1</h4>
-              <p>Download free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-              <div class="author-image">
-                <img src="assets/images/author-04.png" alt="Author 4">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/banner5.jpeg" alt="">
-            <div class="down-content">
-              <h4>Fonetica</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.
-              </p>
-              <div class="author-image">
-                <img src="assets/images/author-05.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/courses-01.jpg" alt="">
-            <div class="down-content">
-              <h4>Gramatica</h4>
-              <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-              <div class="author-image">
-                <img src="assets/images/author-01.png" alt="">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/courses-02.jpg" alt="">
-            <div class="down-content">
-              <h4>Web Development</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.
-              </p>
-              <div class="author-image">
-                <img src="assets/images/author-02.png" alt="">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/courses-03.jpg" alt="">
-            <div class="down-content">
-              <h4>Learn HTML CSS</h4>
-              <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-              <div class="author-image">
-                <img src="assets/images/author-03.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/courses-04.jpg" alt="">
-            <div class="down-content">
-              <h4>Social Media</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.
-              </p>
-              <div class="author-image">
-                <img src="assets/images/author-04.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/courses-05.jpg" alt="">
-            <div class="down-content">
-              <h4>Digital Arts</h4>
-              <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</p>
-              <div class="author-image">
-                <img src="assets/images/author-05.png" alt="">
-              </div>
-              <div class="text-button-free">
-                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/courses-01.jpg" alt="">
-            <div class="down-content">
-              <h4>Media Streaming</h4>
-              <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.
-              </p>
-              <div class="author-image">
-                <img src="assets/images/author-01.png" alt="">
-              </div>
-              <div class="text-button-pay">
-                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <section class="section video" data-section="section5">
     <div class="container">
@@ -430,7 +402,8 @@
               <br><br>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis
               non ante.
             </p>
-            <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Videos</a></div>
+            <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Videos</a>
+            </div>
           </div>
         </div>
         <div class="col-md-6">
@@ -448,170 +421,92 @@
     </div>
   </section>
 
-  <section class="section contact" data-section="section6">
-    <div class="container">
+  <!-- Footer -->
+  <footer class="text-white p-t-75 p-b-32" style="padding: 20px;">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>Contactanos</h2>
-          </div>
+        <!-- Logo y enlaces -->
+        <div class="col-sm-6 col-lg-3 p-b-50 text-center">
+          <h4 class="stext-301 cl0 p-b-30">
+            <img src="./assets/images/file2.png" style="height: 80px;">
+          </h4>
+          <ul class="list-unstyled">
+            <li class="p-b-10">
+              <a href="#" class="stext-107 cl7 hov-cl1 trans-04 text-white">Escuela</a>
+            </li>
+            <li class="p-b-10">
+              <a href="#" class="stext-107 cl7 hov-cl1 trans-04 text-white">De Inglés</a>
+            </li>
+            <li class="p-b-10">
+              <a href="#" class="stext-107 cl7 hov-cl1 trans-04 text-white">Especializada</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-md-6">
 
-          <!-- Do you need a working HTML contact-form script?
-                	
-                    Please visit https://templatemo.com/contact page -->
-
-          <form id="contact" action="" method="post">
-            <div class="row">
-              <div class="col-md-6">
-                <fieldset>
-                  <input name="name" type="text" class="form-control" id="name" placeholder="Nombre" required="">
-                </fieldset>
-              </div>
-              <div class="col-md-6">
-                <fieldset>
-                  <input name="email" type="text" class="form-control" id="email" placeholder=" Email" required="">
-                </fieldset>
-              </div>
-              <div class="col-md-12">
-                <fieldset>
-                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Mensaje..."
-                    required=""></textarea>
-                </fieldset>
-              </div>
-              <div class="col-md-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="button">Enviar Mensaje</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
+        <!-- Contacto -->
+        <div class="col-sm-6 col-lg-3 p-b-50" style="padding:30px;">
+          <h4 class="stext-301 cl0 p-b-30 text-white"></h4>
+          <ul class="list-unstyled">
+            <li class="p-b-10">¿Tienes dudas o preguntas?</li>
+            <li class="p-b-10"><strong>664 123 4567</strong></li>
+            <li class="p-b-10">No dudes en contactarnos. <br>Lunes a Sabado 1-8pm</li>
+          </ul>
         </div>
-        <div class="col-md-6">
-          <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.9139617585284!2d-116.95994329673924!3d32.4902985937591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d93940cdada191%3A0x6304e12430059076!2sOld%20Souls%20Restaurante%20y%20M%C3%BAsica!5e0!3m2!1ses!2smx!4v1732057364801!5m2!1ses!2smx" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
- <!-- Footer -->
- <footer class="bg3 p-t-75 p-b-32" style="padding-top: 50px;padding-bottom: 20px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-lg-3 p-b-50 ">
-        <h4 class="stext-301 cl0 p-b-30 text-left">
-          <img src="./assets/images/file2.png" style="height: 60px;">
-        </h4>
-
-        <ul class="text-left">
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Escuela
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              De Ingles
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Especializada
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-      <div class="col-sm-6 col-lg-3 p-b-50 text-left">
-        <h4 class="stext-301 cl0 p-b-30 text-white">
-          Contactanos
-        </h4>
-
-        <ul>
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Tienes dudas o preguntas?
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Visítanos en nuestra sede
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Contáctanos al <strong>664 123 4567</strong>
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              para más información sobre nuestros programas y cursos.
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-sm-6 col-lg-3 p-b-50">
-        <h4 class="stext-301 cl0 p-b-30 text-white">
-          Ubicacion
-        </h4>
-        <div class="col-md-12">
-          <div id="map">
+        <!-- Mapa -->
+        <div class="col-sm-6 col-lg-3 p-b-50">
+          <h4 class="stext-301 cl0 p-b-30 text-white" style="padding: 10px;">Ubicación</h4>
+          <div class=" col-md-12 embed-responsive-16by9">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.9139617585284!2d-116.95994329673924!3d32.4902985937591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d93940cdada191%3A0x6304e12430059076!2sOld%20Souls%20Restaurante%20y%20M%C3%BAsica!5e0!3m2!1ses!2smx!4v1732057364801!5m2!1ses!2smx"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100px" frameborder="0"
-              style="border:0" allowfullscreen></iframe>
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="80%" height="100px" frameborder="0"
+              style="border:0;" allowfullscreen></iframe>
           </div>
         </div>
-      </div>
 
-      <div class="col-sm-6 col-lg-3 p-b-50 text-rigth">
-        <h4 class="stext-301 cl0 p-b-30 text-white" style="padding: 10px;">
-          Redes Sociales
-        </h4>
+        <!-- Redes sociales -->
+        <div class="col-sm-6 col-lg-3 p-b-50">
+          <h4 class="stext-301 cl0 p-b-30 text-white" style="padding: 10px;">Contáctanos</h4>
+          <div class="mb-3">
+            <button type="button" class="btn btn-success w-70">WhatsApp</button>
+          </div>
+          <div style="padding: 10px;">
+            <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
+              <i class="fa fa-facebook" style="padding: 10px;"></i>
+            </a>
+            <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
+              <i class="fa fa-instagram" style="padding: 10px;"></i>
+            </a>
 
-
-        <div class="p-t-18">
-          <button type="button" class="btn btn-success" >
-            WhatsApp
-          </button>
+          </div>
         </div>
-        <br>
 
-        <div class="p-t-27">
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-            <i class="fa fa-facebook"  style="padding: 10px;"></i>
-          </a>
 
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-            <i class="fa fa-instagram" style="padding: 10px;"></i>
-          </a>
-
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-            <i class="fa fa-pinterest-p" style="padding: 10px;"></i>
-          </a>
-        </div>
       </div>
     </div>
-
-  </div>
-</footer>
-
+  </footer>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>// Espera a que la página cargue completamente
+    document.addEventListener("DOMContentLoaded", function () {
+      const logo = document.querySelector('.animate-logo');
+      logo.classList.add('active'); // Agrega la clase para activar el efecto
+    });
+  </script>
+
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 6000); // Cambia cada 7 segundos
+  </script>
 
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
@@ -620,57 +515,6 @@
   <script src="assets/js/video.js"></script>
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
-  <!-- <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
-
-    var showSection = function showSection(section, isAnimate) {
-      var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-      if (isAnimate) {
-        $('body, html').animate({
-          scrollTop: reqSectionPos
-        },
-          800);
-      } else {
-        $('body, html').scrollTop(reqSectionPos);
-      }
-
-    };
-
-    var checkSection = function checkSection() {
-      $('.section').each(function () {
-        var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-          reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
-        }
-      });
-    };
-
-    $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
-      if ($(e.target).hasClass('external')) {
-        return;
-      }
-      e.preventDefault();
-      $('#menu').removeClass('active');
-      showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function () {
-      checkSection();
-    });
-  </script> -->
 </body>
 
 </html>

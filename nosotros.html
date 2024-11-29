@@ -22,12 +22,52 @@
   <link rel="stylesheet" href="assets/css/lightbox.css">
   <link rel="stylesheet" href="assets/css/estilos.css">
 
+  <style>
+    #bg-image {
+      width: 100%;
+      /* Asegura que abarque todo el ancho de la pantalla */
+      height: auto;
+      /* Mantiene la proporción original */
+      object-fit: cover;
+      /* Ajusta la imagen para que se recorte si es necesario */
+      max-height: 50vh;
+      /* Limita la altura a un 50% del viewport (ajusta el valor según necesites) */
+      display: block;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      height: 200px;
+      /* Ajusta la altura de la imagen */
+      object-fit: cover;
+      /* Mantiene la proporción de la imagen */
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+        /* Ancho responsivo en dispositivos más pequeños */
+      }
+    }
+  </style>
+
 </head>
 
 <body>
 
-   <!--header-->
-   <header class="main-header clearfix" role="header">
+  <!--header-->
+  <header class="main-header clearfix" role="header">
 
     <div class="logo">
       <a href="#"><em><img src="./assets/images/file.png" style="height: 50px;"></em>EDIE</a>
@@ -65,7 +105,7 @@
         <div class="carousel-slide active">
           <div class="caption">
             <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 100px;"></h6>
-            <h2><span class="left-text">Contacto</span> <span class="right-text"><em></em></span>
+            <h2><span class="left-text">Acerca de Nosotros</span> <span class="right-text"><em></em></span>
             </h2>
 
           </div>
@@ -74,14 +114,14 @@
         <div class="carousel-slide">
           <div class="caption">
             <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 100px;"></h6>
-            <h2><span class="left-text"></span><span class="right-text"><em>Contacto</em></span></h2>
+            <h2><span class="left-text"></span><span class="right-text"><em>Quienes somos?</em></span></h2>
           </div>
         </div>
         <!-- Slide 3 -->
         <div class="carousel-slide">
           <div class="caption">
             <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 100px;"></h6>
-            <h2><span class="left-text">Contacto</span> <span class="right-text"><em></em></span>
+            <h2><span class="left-text">Conoce Nuestra Metodología</span> <span class="right-text"><em></em></span>
             </h2>
 
           </div>
@@ -92,103 +132,149 @@
   </section>
   <!-- ***** Main Banner Area End ***** -->
 
-  <section class="section video" data-section="section5">
+
+  <!-- Metodología -->
+  <section class="section contact" data-section="section6">
     <div class="container">
-      <div class="row d-flex justify-content-center text-center text-white">
-        <!-- Bloque 1 -->
-        <div class="col-md-4 text-white">
-          <div class="content-block text-white">
-            <h4><strong>¿Quiénes somos?</strong></h4>
-            <p>
-              EDIE nace a raíz de la necesidad de obtener la competencia del idioma inglés de manera efectiva, y ante la
-              deficiencia que se ha encontrado en distintos lugares, nace el ideal de una escuela que cubra dichas
-              necesidades.
-            </p>
+      <div class="row justify-content-center">
+
+        <div class="col-md-12 text-center mb-4">
+          <div class="section-heading">
+            <h2>En este apartado queremos compartir contigo un poco de nosotros.</h2>
           </div>
         </div>
-        <!-- Bloque 2 -->
-        <div class="col-md-4">
-          <div class="content-block">
-            <h4><strong>¿Cuál es nuestro programa de estudio?</strong></h4>
-            <p>
-              Manejamos un programa interactivo conversacional con el objetivo de ser autónomo en el idioma, abarcando
-              comprensión lectora, auditiva y estructura gramatical. Consiste en 4 niveles de 5 meses, con proyectos
-              mensuales como presentaciones o entrevistas.
-            </p>
+
+        <div class="col-md-6 d-flex justify-content-center mb-4">
+          <div class="card" style="width: 400px; background-color: rgba(0, 36, 87, 0.499); transition: transform 0.3s;">
+            <img alt="Imagen de una clase de inglés con estudiantes y un profesor" class="card-img-top"
+              src="https://storage.googleapis.com/a1aa/image/qEzXjRtOS050BNlJUKa94QYjhCfYQyLH26a28dHNREbvZ46JA.jpg" />
+            <div class="card-body">
+              <h4 class="card-title text-white"><strong><em>Escuela de Inglés Especializada</em></strong></h4>
+              <p class="card-text text-white">EDIE, nace a raíz de la necesidad de obtener la competencia del idioma inglés de manera efectiva, y ante la deficiencia que se ha encontrado en distintos lugares, nace el ideal de una escuela que cubra dichas necesidades.</p>
+            </div>
           </div>
         </div>
-        <!-- Bloque 3 -->
-        <div class="col-md-4">
-          <div class="content-block">
-            <h4><strong>¿Cuál es nuestra metodología?</strong></h4>
-            <p>
-              Priorizamos actividades del habla para desarrollar habilidades comunicativas. Utilizamos libros, juegos de
-              mesa y TIC. Los grupos son de máximo 8 alumnos, distribuidos según su nivel.
-            </p>
+
+        <div class="col-md-6 d-flex justify-content-center mb-4">
+          <div class="card" style="width: 400px; background-color: rgba(0, 36, 87, 0.499); transition: transform 0.3s;">
+            <img alt="Imagen de un grupo de estudiantes en una clase de inglés intermedia" class="card-img-top"
+              src="https://storage.googleapis.com/a1aa/image/hgmpYJDUweRMbyA5RZxwPKGSdlLgtTcfte3VnxbBRfr8NDXPB.jpg" />
+            <div class="card-body">
+              <h4 class="card-title text-white"><strong>Programa de <em> Estudio</em></strong></h4>
+              <p class="card-text text-white">Manejamos un programa interactivo conversacional, el cual tiene por objetivo el ser autónomo en el idioma.  Esto, sin dejar de lado así mismo, las habilidades restantes como lo son, la comprensión lectora, auditiva y estructura gramatical.<strong><em>Nuestro programa consiste en 4 niveles de 5 meses cada uno.</em></strong>  Al finalizar cada mes, se presenta un pequeño proyecto. El cual puede ir desde una presentación hasta una entrevista de trabajo.
+              </p>
+            </div>
           </div>
         </div>
+
+        <div class="col-md-6 d-flex justify-content-center mb-4">
+          <div class="card" style="width: 400px; background-color: rgba(0, 36, 87, 0.499); transition: transform 0.3s;">
+            <img alt="Imagen de una clase de inglés con estudiantes y un profesor" class="card-img-top"
+              src="https://storage.googleapis.com/a1aa/image/Wc78fZeKY3lDcksoe1jiPugLS6oMI0bJ82ZONPALORUEnhrnA.jpg" />
+            <div class="card-body">
+              <h4 class="card-title text-white"><strong>Nuestra <em>Metodología</em></strong></h4>
+              <p class="card-text text-white">Tenemos un enfoque dirigido a las necesidades comunicativas que son requeridas en el exterior. Por lo que en nuestras clases,<strong><em> priorizamos actividades del habla, donde se tiene la oportunidad de desarrollar habilidades comunicativas efectivas.</em></strong> 
+
+                Así mismo, complementamos las clases con el uso de un libro de trabajo, juegos de mesa, uso de las TIC.
+                
+                Manejamos grupos de máximo 8 alumnos. Así mismo, cabe mencionar que todos nuestros alumnos están distribuidos de acuerdo a su nivel.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-center mb-4">
+          <div class="card" style="width: 400px; background-color: rgba(0, 36, 87, 0.499); transition: transform 0.3s;">
+            <img alt="Imagen de una clase de inglés con estudiantes y un profesor" class="card-img-top"
+              src="https://storage.googleapis.com/a1aa/image/hgmpYJDUweRMbyA5RZxwPKGSdlLgtTcfte3VnxbBRfr8NDXPB.jpg" />
+            <div class="card-body">
+              <h4 class="card-title text-white"><strong>Sesiones de<em> Conversacion</em></strong></h4>
+              <p class="card-text text-white">Durante <strong><em>las sesiones se manejan actvidades enfocadas exclusivamente al habla,</em></strong> empalmando el conocimiento gramatical. Del mismo modo, trabajar la pronunciacion de las palabras de manera correcta. Todo esto haciendo uso de materiales didacticos como lo son, juegos de mesa, flashcards etc. Cabe mencionar que todas las sesiones impartidas a un maximo de 8 perosnas por sesion. Del mismo modo, son abiertas a todos los grupos del mismo nivel. Por lo que podras entablar conversacion con persona de otros grupos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="main-button"><a rel="nofollow" href="contacto.html" target="_parent">Inscribete</a></div>
       </div>
+
+    </div>
     </div>
   </section>
 
-
-
-  <section class="section why-us" data-section="section2">
+   <!--Por que nosotros-->
+   <section class="section why-us" data-section="section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>Escuela de Inglés Especializada</h2>
+            <h2> ¿Deseas iniciar el año hablando Inglés?<br>
+
+              ¡Somos tu mejor opción!</h2>
           </div>
         </div>
         <div class="col-md-12">
           <div id='tabs'>
             <ul>
-              <li><a href='#tabs-1'>Educacion Efectiva</a></li>
-              <li><a href='#tabs-2'>Maestros Cualificados</a></li>
-              <li><a href='#tabs-3'>Ingles Conversacional</a></li>
+              <li><a href='#tabs-1'>Efectividad</a></li>
+              <li><a href='#tabs-2'>Conversacional</a></li>
+              <li><a href='#tabs-3'>Maestros</a></li>
             </ul>
             <section class='tabs-content'>
               <article id='tabs-1'>
                 <div class="row">
                   <div class="col-md-6">
-                    <img src="assets/images/choose-us-image-01.png" alt="">
+                    <div class="hov-img0" style="width: 350px; height: 400px; overflow: hidden;">
+                      <video loop controls id="myVideo" style=" width: 100%;
+                          height: 100%;
+                          object-fit: cover;" class="text-center">
+                        <source src="./assets/images/video1.mp4" type="video/mp4">
+                      </video>
+                    </div>
                   </div>
                   <div class="col-md-6">
                     <h4>Educacion Efectiva</h4>
                     <p>Nuestra metodología de enseñanza combina estrategias innovadoras con prácticas personalizadas
-                      para garantizar un aprendizaje efectivo.<a href="https://paypal.me/templatemo" target="_parent"
-                        rel="sponsored">a little donation</a> Cada lección está diseñada para ayudarte a alcanzar tus
-                      metas de manera clara y progresiva, optimizando tu tiempo y esfuerzo.</p>
-                  </div>
-                </div>
-              </article>
-              <article id='tabs-2'>
-                <div class="row">
-                  <div class="col-md-6">
-                    <img src="assets/images/choose-us-image-02.png" alt="">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Maestros Calificados</h4>
-                    <p>Contamos con un equipo de maestros certificados y apasionados por la enseñanza. Su experiencia y
-                      compromiso aseguran que cada estudiante reciba la mejor orientación, creando un ambiente de
-                      aprendizaje profesional y motivador.</p>
-                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam
-                      felis non ante.</p>
+                      para garantizar un aprendizaje efectivo. Cada lección está diseñada para ayudarte a alcanzar tus
+                      metas de manera clara y progresiva, optimizando tu tiempo y esfuerzo.<br><br> <strong>Lic. Gerardo Guadalupe Mota Vejar</strong><br>
+
+                      Director del Centro</p>
                   </div>
                 </div>
               </article>
               <article id='tabs-3'>
                 <div class="row">
                   <div class="col-md-6">
-                    <img src="assets/images/choose-us-image-03.png" alt="">
+                    <div class="hov-img0" style="width: 350px; height: 400px; overflow: hidden;">
+                      <video loop controls id="myVideo" style=" width: 100%;
+                          height: 100%;
+                          object-fit: cover;" class="text-center">
+                        <source src="./assets/images/video2.mp4" type="video/mp4">
+                      </video>
+                    </div>
                   </div>
                   <div class="col-md-6">
-                    <h4>Ingles Conversacional</h4>
+                    <h4>Maestros Calificados</h4>
+                    <p>Contamos con un equipo de maestros certificados y apasionados por la enseñanza. Su experiencia y
+                      compromiso aseguran que cada estudiante reciba la mejor orientación, creando un ambiente de
+                      aprendizaje profesional y motivador.</p>
+                    <p>Acercate a nuestras instalaciones.</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-2'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="hov-img0" style="width: 350px; height: 400px; overflow: hidden;">
+                      <video loop controls id="myVideo" style=" width: 100%;
+                          height: 100%;
+                          object-fit: cover;" class="text-center">
+                        <source src="./assets/images/video4.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Sesiones de Conversacion</h4>
                     <p>Domina el inglés conversacional con nuestras dinámicas prácticas. Aprende a comunicarte con
                       fluidez en situaciones cotidianas y profesionales mientras desarrollas confianza y habilidades que
-                      marcarán la diferencia en tu vida diaria.<a rel="nofollow" href="https://templatemo.com/contact"
-                        target="_parent">contact TemplateMo</a> now.</p>
+                      marcarán la diferencia en tu vida diaria.</p>
                   </div>
                 </div>
               </article>
@@ -204,27 +290,22 @@
       <div class="row">
         <div class="col-md-6 align-self-center">
           <div class="left-content">
-            <span>Presentes en las Redes sociales</span>
-            <h4>Conoce nuestros videos<em> acerca de la escuela</em></h4>
-            <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However,
-              you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress.
-              You may <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a>
-              for details.
-              <br><br>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis
-              non ante.
+            <span>Acercate a nosotros</span>
+            <h4><em>Horario de Atencion</em></h4>
+            <p>Lunes a jueves (9:00 am a 7:30 pm)<br>Sábado (9:00 am a 5:00 pm)
+              <br><br>Tel.(664) 1212736
+              <br><br>C. Fresa 1580, Guanajuato, 22117 Tijuana, B.C.
             </p>
-            <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Videos</a>
+            <div class="main-button"><a rel="nofollow" href="contacto.html" target="">Contactanos</a>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <article class="video-item">
-            <div class="video-caption">
-              <h4>Reproduce el Video</h4>
-            </div>
+            
             <figure>
-              <a href="https://www.youtube.com/watch?v=NHYhUjR5F_g" class="play"><img
-                  src="assets/images/LogoEDIE.jpg"></a>
+              <a href="https://youtu.be/GvG-PYVMXHc?si=sMsL7rPlhY6ERqA5" class="play"><img
+                  src="assets/images/banner3.jpeg"></a>
             </figure>
           </article>
         </div>
@@ -260,7 +341,7 @@
           <ul class="list-unstyled">
             <li class="p-b-10">¿Tienes dudas o preguntas?</li>
             <li class="p-b-10"><a href="https://wa.me/526641212736"><strong>(664) 1212736</strong></a></li>
-            <li class="p-b-10">No dudes en contactarnos. <br>Lunes a Sabado 1-8pm</li>
+            <li class="p-b-10">No dudes en contactarnos. <br>Lunes a Sabado 1-8pm<br>Sábado (9:00 am a 5:00 pm)</li>
           </ul>
         </div>
 
@@ -269,7 +350,7 @@
           <h4 class="stext-301 cl0 p-b-30 text-white" style="padding: 10px;">Ubicación</h4>
           <div class=" col-md-12 embed-responsive-16by9">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.9139617585284!2d-116.95994329673924!3d32.4902985937591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d93940cdada191%3A0x6304e12430059076!2sOld%20Souls%20Restaurante%20y%20M%C3%BAsica!5e0!3m2!1ses!2smx!4v1732057364801!5m2!1ses!2smx"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6730.548843949414!2d-116.96711665820398!3d32.49209377448901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9397adab9a351%3A0xab4fd08042f07ed9!2sEscuela%20De%20Ingl%C3%A9s%20Especializada!5e0!3m2!1ses-419!2smx!4v1732913945093!5m2!1ses-419!2smx"
               loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="80%" height="100px" frameborder="0"
               style="border:0;" allowfullscreen></iframe>
           </div>
@@ -283,10 +364,12 @@
                 style="height:40px;"></a>
           </div>
           <div style="padding: 10px;">
-            <a href="https://www.facebook.com/Effectivecommunication2016" class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
+            <a href="https://www.facebook.com/Effectivecommunication2016"
+              class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
               <i class="fa fa-facebook" style="padding: 10px;"></i>
             </a>
-            <a href="https://www.facebook.com/Effectivecommunication2016" class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
+            <a href="https://www.facebook.com/Effectivecommunication2016"
+              class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
               <i class="fa fa-instagram" style="padding: 10px;"></i>
             </a>
 

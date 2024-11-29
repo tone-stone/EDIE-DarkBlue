@@ -2718,10 +2718,13 @@
 	 * @public
 	 */
 	Autoplay.Defaults = {
-		autoplay: false,
-		autoplayTimeout: 5000,
+		items: 1,
+		loop:true,
+		autoplay: true,
+		autoplayTimeout: 1000,
 		autoplayHoverPause: false,
-		autoplaySpeed: false
+		autoplaySpeed: 300,
+		smartSpeed: 300,
 	};
 
 	/**

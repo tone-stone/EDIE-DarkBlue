@@ -1,0 +1,261 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Escuela de Inglés
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .hero {
+            background: url('https://placehold.co/1200x400') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .courses,
+        .testimonials,
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .course,
+        .testimonial,
+        .contact-form {
+            flex: 1 1 30%;
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .course img,
+        .testimonial img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Escuela de Inglés
+        </h1>
+    </header>
+    <nav>
+        <a href="#courses">
+            Cursos
+        </a>
+        <a href="#testimonials">
+            Testimonios
+        </a>
+        <a href="#contact">
+            Contacto
+        </a>
+    </nav>
+    <div class="hero">
+        <h1>
+            Aprende Inglés con Nosotros
+        </h1>
+    </div>
+    <div class="container">
+        <section id="courses">
+            <h2 class="section-title">
+                Nuestros Cursos
+            </h2>
+            <div class="courses">
+                <div class="course">
+                    <img alt="Imagen de una clase de inglés con estudiantes y un profesor" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/Wc78fZeKY3lDcksoe1jiPugLS6oMI0bJ82ZONPALORUEnhrnA.jpg"
+                        width="300" />
+                    <h3>
+                        Curso Básico
+                    </h3>
+                    <p>
+                        Ideal para principiantes que desean aprender los fundamentos del inglés.
+                    </p>
+                </div>
+                <div class="course">
+                    <img alt="Imagen de un grupo de estudiantes en una clase de inglés intermedia" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/hgmpYJDUweRMbyA5RZxwPKGSdlLgtTcfte3VnxbBRfr8NDXPB.jpg"
+                        width="300" />
+                    <h3>
+                        Curso Intermedio
+                    </h3>
+                    <p>
+                        Para aquellos que ya tienen conocimientos básicos y desean mejorar sus habilidades.
+                    </p>
+                </div>
+                <div class="course">
+                    <img alt="Imagen de una clase avanzada de inglés con estudiantes participando activamente"
+                        height="200"
+                        src="https://storage.googleapis.com/a1aa/image/qEzXjRtOS050BNlJUKa94QYjhCfYQyLH26a28dHNREbvZ46JA.jpg"
+                        width="300" />
+                    <h3>
+                        Curso Avanzado
+                    </h3>
+                    <p>
+                        Perfecto para estudiantes avanzados que buscan perfeccionar su inglés.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h2 class="section-title">
+                Testimonios
+            </h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img alt="Retrato de un estudiante satisfecho" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/JHpJBf3z6tyjSaLyQZYeWa4AEDV79c4bPyjhhu88jDClzw1TA.jpg"
+                        width="100" />
+                    <p>
+                        "La mejor escuela de inglés. Los profesores son muy profesionales y amables."
+                    </p>
+                    <p>
+                        - Juan Pérez
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <img alt="Retrato de una estudiante satisfecha" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/6HSjflJXbcTVT69zUZrXO93Y2D452Ig7YvNwJm20Ff4jzw1TA.jpg"
+                        width="100" />
+                    <p>
+                        "He mejorado mi inglés de manera increíble. ¡Recomiendo esta escuela a todos!"
+                    </p>
+                    <p>
+                        - María López
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <img alt="Retrato de otro estudiante satisfecho" height="100"
+                        src="https://storage.googleapis.com/a1aa/image/wBFeVPObJY3BJy7HsvWF5DeETDbnlAj6oG1YlWvbT9shzw1TA.jpg"
+                        width="100" />
+                    <p>
+                        "Los cursos son muy completos y las clases son muy dinámicas."
+                    </p>
+                    <p>
+                        - Carlos García
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2 class="section-title">
+                Contacto
+            </h2>
+            <div class="contact">
+                <div class="contact-form">
+                    <h3>
+                        Envíanos un mensaje
+                    </h3>
+                    <form>
+                        <label for="name">
+                            Nombre:
+                        </label>
+                        <input id="name" name="name" required="" type="text" />
+                        <label for="email">
+                            Correo Electrónico:
+                        </label>
+                        <input id="email" name="email" required="" type="email" />
+                        <label for="message">
+                            Mensaje:
+                        </label>
+                        <textarea id="message" name="message" required="" rows="4"></textarea>
+                        <button type="submit">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>
+                        Información de Contacto
+                    </h3>
+                    <p>
+                        <i class="fas fa-map-marker-alt">
+                        </i>
+                        Dirección: Calle Falsa 123, Ciudad, País
+                    </p>
+                    <p>
+                        <i class="fas fa-phone">
+                        </i>
+                        Teléfono: +123 456 7890
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope">
+                        </i>
+                        Email: info@escueladeingles.com
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>
+            © 2023 Escuela de Inglés. Todos los derechos reservados.
+        </p>
+    </footer>
+</body>
+
+</html>

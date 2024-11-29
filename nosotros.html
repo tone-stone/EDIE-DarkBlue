@@ -20,201 +20,11 @@
   <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
-  <style>
-    /* Configuración general */
-    .left-text,
-    .right-text {
-      display: inline-block;
-      opacity: 0;
-      position: relative;
-    }
-
-    /* Animaciones */
-    @keyframes slideInLeft {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideInRight {
-      0% {
-        transform: translateX(100%);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    /* Aplicación de las animaciones */
-    .left-text {
-      animation: slideInLeft 1.5s ease-out forwards;
-    }
-
-    .right-text {
-      animation: slideInRight 1.5s ease-out forwards;
-      animation-delay: 0.5s;
-      /* Para que aparezca un poco después */
-    }
-
-    /* Clase base para animar */
-    .animate-logo {
-
-      /* Inicia invisible */
-      transform: translateY(50px);
-      /* Posicionado 50px abajo */
-      transition: all 2s ease-in-out;
-      /* Duración y suavidad */
-    }
-
-    /* Estado activo cuando la animación comienza */
-    .animate-logo.active {
-      opacity: 1;
-      /* Aparece */
-      transform: translateY(0);
-      /* Se mueve a su posición original */
-    }
-
-    #bg-image {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    .main-banner {
-      position: relative;
-      height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-
-    .caption {
-      text-align: center;
-      color: white;
-    }
-
-
-    .section.contact {
-      padding: 40px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 20px;
-    }
-
-    .card {
-      text-align: center;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .card-img-top {
-      max-width: 100%;
-      max-height: 200px;
-      /* Ajusta el tamaño máximo de la imagen */
-      object-fit: cover;
-      /* Asegura que la imagen se adapte correctamente */
-    }
-
-    .card-body {
-      padding: 15px;
-    }
-
-    .row.justify-content-center {
-      display: flex;
-      justify-content: center;
-    }
-
-
-    footer .row {
-      margin: 0;
-      /* Elimina márgenes del row */
-      padding: 0;
-      /* Elimina padding del row */
-    }
-
-    footer .col-sm-6 {
-      padding: 20px;
-      /* Agrega un padding interno a las columnas si es necesario */
-    }
-
-    footer {
-      width: 100%;
-      /* Asegura que el footer ocupe todo el ancho */
-    }
-
-    footer .row {
-      width: 100%;
-      /* Asegura que el row ocupe todo el ancho */
-    }
-
-    .custom-carousel {
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-    }
-
-    .carousel-slide {
-      position: center;
-      top: 0;
-      left: 100%;
-      width: 100%;
-      opacity: 0;
-      transition: all 1s ease-in-out;
-    }
-
-    .carousel-slide.active {
-      left: 0;
-      opacity: 1;
-    }
-
-
-    .section.video {
-  padding: 40px 0;
-  background-color: #f8f9fa; /* Fondo claro para resaltar */
-}
-
-.content-block {
-  background: rgba(0, 40, 114, 0.507); /* Fondo del contenido */
-  border: 1px solid #ddd; /* Borde sutil */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno */
-  margin: 10px; /* Espaciado entre bloques */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
-.content-block h4 {
-  font-size: 1.2rem;
-  color: #C44440;
-  margin-bottom: 15px;
-}
-
-.content-block p {
-  font-size: 1rem;
-  color: #fffbfb;
-  line-height: 1.5;
-}
-
-  </style>
+  <link rel="stylesheet" href="assets/css/estilos.css">
 
 </head>
 
 <body>
-
 
   <!--header-->
   <header class="main-header clearfix" role="header">
@@ -227,15 +37,15 @@
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a href="index.html">Inicio</a></li>
-        <li class="active-menu"><a href="nosotros.html">Nosotros</a></li>
-        <li class="has-submenu"><a href="cursos.html">Cursos</a>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li class="has-submenu"><a href="clases.html">Clases</a>
           <ul class="sub-menu">
             <li><a href="cursos.html">Principiante</a></li>
             <li><a href="cursos.html">Intermedio</a></li>
             <li><a href="cursos.html">Avanzado</a></li>
           </ul>
         </li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li class="active-menu"><a href="contacto.html">Contacto</a></li>
         <!-- <li><a href="contacto.html">Maestros</a></li> -->
         <li><a href="#" class="external"><button type="button" class="btn btn-success w-70 "
               style="height:35px;">WhatsApp</button></a></li>
@@ -254,7 +64,7 @@
         <div class="carousel-slide active">
           <div class="caption">
             <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 100px;"></h6>
-            <h2><span class="left-text">Nosotros</span> <span class="right-text"><em></em></span>
+            <h2><span class="left-text">Contacto</span> <span class="right-text"><em></em></span>
             </h2>
 
           </div>
@@ -263,14 +73,14 @@
         <div class="carousel-slide">
           <div class="caption">
             <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 100px;"></h6>
-            <h2><span class="left-text"></span><span class="right-text"><em>Nosotros</em></span></h2>
+            <h2><span class="left-text"></span><span class="right-text"><em>Contacto</em></span></h2>
           </div>
         </div>
         <!-- Slide 3 -->
         <div class="carousel-slide">
           <div class="caption">
             <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 100px;"></h6>
-            <h2><span class="left-text">Nosotros</span> <span class="right-text"><em></em></span>
+            <h2><span class="left-text">Contacto</span> <span class="right-text"><em></em></span>
             </h2>
 
           </div>
@@ -319,7 +129,7 @@
       </div>
     </div>
   </section>
-  
+
 
 
   <section class="section why-us" data-section="section2">

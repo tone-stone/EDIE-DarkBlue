@@ -20,137 +20,7 @@
   <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
-  <style>
-    /* Configuración general */
-    .left-text,
-    .right-text {
-      display: inline-block;
-      opacity: 0;
-      position: relative;
-    }
-
-    /* Animaciones */
-    @keyframes slideInLeft {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideInRight {
-      0% {
-        transform: translateX(100%);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    /* Aplicación de las animaciones */
-    .left-text {
-      animation: slideInLeft 1.5s ease-out forwards;
-    }
-
-    .right-text {
-      animation: slideInRight 1.5s ease-out forwards;
-      animation-delay: 0.5s;
-      /* Para que aparezca un poco después */
-    }
-
-    /* Clase base para animar */
-    .animate-logo {
-     
-      /* Inicia invisible */
-      transform: translateY(50px);
-      /* Posicionado 50px abajo */
-      transition: all 2s ease-in-out;
-      /* Duración y suavidad */
-    }
-
-    /* Estado activo cuando la animación comienza */
-    .animate-logo.active {
-      opacity: 1;
-      /* Aparece */
-      transform: translateY(0);
-      /* Se mueve a su posición original */
-    }
-
-
-    .section.contact {
-  padding: 40px 0;
-}
-
-.section-heading {
-  margin-bottom: 20px;
-}
-
-.card {
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-top {
-  max-width: 100%;
-  max-height: 200px; /* Ajusta el tamaño máximo de la imagen */
-  object-fit: cover; /* Asegura que la imagen se adapte correctamente */
-}
-
-.card-body {
-  padding: 15px;
-}
-
-.row.justify-content-center {
-  display: flex;
-  justify-content: center;
-}
-
-
-    footer .row {
-    margin: 0; /* Elimina márgenes del row */
-    padding: 0; /* Elimina padding del row */
-  }
-
-  footer .col-sm-6 {
-    padding: 20px; /* Agrega un padding interno a las columnas si es necesario */
-  }
-
-  footer {
-  width: 100%; /* Asegura que el footer ocupe todo el ancho */
-}
-
-footer .row {
-  width: 100%; /* Asegura que el row ocupe todo el ancho */
-}
-
-.custom-carousel {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-}
-
-.carousel-slide {
-  position:center;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: all 1s ease-in-out;
-}
-
-.carousel-slide.active {
-  left: 0;
-  opacity: 1;
-}
-
-  </style>
+  <link rel="stylesheet" href="assets/css/estilos.css">
 
 </head>
 
@@ -159,42 +29,44 @@ footer .row {
   <!--header-->
   <header class="main-header clearfix" role="header">
 
-      <div class="logo">
-        <a href="#"><em><img src="./assets/images/file.png" style="height: 50px;"></em>EDIE</a>
-      </div>
+    <div class="logo">
+      <a href="#"><em><img src="./assets/images/file.png" style="height: 50px;"></em>EDIE</a>
+    </div>
 
-      <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
-      <nav id="menu" class="main-nav" role="navigation">
-        <ul class="main-menu">
-          <li class="active-menu"><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li class="has-submenu"><a href="cursos.html">Cursos</a>
-            <ul class="sub-menu">
-              <li><a href="cursos.html">Principiante</a></li>
-              <li><a href="cursos.html">Intermedio</a></li>
-              <li><a href="cursos.html">Avanzado</a></li>
-            </ul></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <!-- <li><a href="contacto.html">Maestros</a></li> -->
-          <li><a href="#" class="external"><button type="button" class="btn btn-success w-70 " style="height:35px;">WhatsApp</button></a></li>
-        </ul>
-      </nav>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li class="active-menu"><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li class=""><a href="clases.html">Clases</a>
+          <!-- <ul class="sub-menu">
+            <li><a href="cursos.html">Principiante</a></li>
+            <li><a href="cursos.html">Intermedio</a></li>
+            <li><a href="cursos.html">Avanzado</a></li>
+          </ul> -->
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <!-- <li><a href="contacto.html">Maestros</a></li> -->
+        <li><a href="#" class="external"><img src="./assets/images/WhatsappLogo.png" style="height:40px;"></a></li>
+      </ul>
+    </nav>
 
   </header>
 
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
-    <video autoplay muted loop id="bg-video">
+    <video  muted loop id="bg-video">
       <source src="assets/images/course-video.mp4" type="video/mp4" />
     </video>
-  
+
     <div class="video-overlay header-text ">
       <div class="custom-carousel">
         <!-- Slide 1 -->
         <div class="carousel-slide active">
           <div class="caption">
             <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 300px;"></h6>
-            <h2><span class="left-text">Escuela de Inglés</span> <span class="right-text"><em>Especializada</em></span></h2>
+            <h2><span class="left-text">Escuela de Inglés</span> <span class="right-text"><em>Especializada</em></span>
+            </h2>
             <div class="main-button">
               <div class="scroll-to-section"><a href="#section2">Contactanos</a></div>
             </div>
@@ -214,14 +86,15 @@ footer .row {
         <div class="carousel-slide">
           <div class="caption">
             <h6><img src="./assets/images/file.png" class="animate-logo" alt="Logo" style="height: 300px;"></h6>
-            <h2><span class="left-text">Clases con</span> <span class="right-text"><em>Maestros Calificados</em></span></h2>
+            <h2><span class="left-text">Clases con</span> <span class="right-text"><em>Maestros Calificados</em></span>
+            </h2>
             <div class="main-button">
               <div class="scroll-to-section"><a href="#section4">Inscríbete</a></div>
             </div>
           </div>
         </div>
       </div>
-      
+
     </div>
   </section>
   <!-- ***** Main Banner Area End ***** -->
@@ -238,9 +111,10 @@ footer .row {
               <div class="content-hide">
                 <p>Descubre una amplia gama de cursos diseñados para aprender inglés de manera rápida y efectiva. Desde
                   principiantes hasta avanzados, ofrecemos programas dinámicos que se adaptan a tus necesidades y
-                  objetivos. 
+                  objetivos.
                 </p>
-                <p class="hidden-sm">Con métodos modernos y profesores certificados, garantizamos un aprendizaje significativo.</p>
+                <p class="hidden-sm">Con métodos modernos y profesores certificados, garantizamos un aprendizaje
+                  significativo.</p>
                 <div class="scroll-to-section"><a href="#section2">Mas Info.</a></div>
               </div>
             </div>
@@ -306,7 +180,7 @@ footer .row {
                           height: 100%;
                           object-fit: cover;" class="text-center">
                         <source src="./assets/images/video1.mp4" type="video/mp4">
-                      </video>                     
+                      </video>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -325,7 +199,7 @@ footer .row {
                           height: 100%;
                           object-fit: cover;" class="text-center">
                         <source src="./assets/images/video2.mp4" type="video/mp4">
-                      </video>                     
+                      </video>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -345,7 +219,7 @@ footer .row {
                           height: 100%;
                           object-fit: cover;" class="text-center">
                         <source src="./assets/images/video4.mp4" type="video/mp4">
-                      </video>                     
+                      </video>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -369,7 +243,8 @@ footer .row {
         <div class="col-md-7 col-xs-12">
           <div class="continer centerIt">
             <div>
-              <h4>Inscribete <em>a cualquiera de nuestros cursos</em> y aprovecha nuestros descuentos</h4>
+              <h4>Inscribete <em>a cualquiera de nuestros cursos</em> y aprovecha nuestros descuentos antes de que
+                termine el año !</h4>
               <div class="counter">
 
                 <div class="days">
@@ -445,8 +320,10 @@ footer .row {
             <img src="assets/images/banner1.jpeg" alt="Course #1">
             <div class="down-content">
               <h4>Principiante</h4>
-              <p>"Inicia tu camino hacia el dominio del inglés con nuestro curso básico. Aprende vocabulario esencial, frases comunes y las bases gramaticales para comunicarte en situaciones cotidianas. Ideal para quienes están empezando desde cero. Contactanos para mas informacion."</p>
-              
+              <p>"Inicia tu camino hacia el dominio del inglés con nuestro curso básico. Aprende vocabulario esencial,
+                frases comunes y las bases gramaticales para comunicarte en situaciones cotidianas. Ideal para quienes
+                están empezando desde cero. Contactanos para mas informacion."</p>
+
               <div class="text-button-pay">
                 <a href="#">Cursos<i class="fa fa-angle-double-right"></i></a>
               </div>
@@ -456,8 +333,10 @@ footer .row {
             <img src="assets/images/banner2.jpeg" alt="Course #2">
             <div class="down-content">
               <h4>Intermedio</h4>
-              <p>"Lleva tu inglés al siguiente nivel. Este curso está diseñado para mejorar tus habilidades de conversación, comprensión y escritura. Aprende a comunicarte con confianza en entornos sociales y laborales mientras amplías tu vocabulario y estructuras gramaticales."</p>
-             
+              <p>"Lleva tu inglés al siguiente nivel. Este curso está diseñado para mejorar tus habilidades de
+                conversación, comprensión y escritura. Aprende a comunicarte con confianza en entornos sociales y
+                laborales mientras amplías tu vocabulario y estructuras gramaticales."</p>
+
               <div class="text-button-free">
                 <a href="#">Cursos<i class="fa fa-angle-double-right"></i></a>
               </div>
@@ -467,9 +346,11 @@ footer .row {
             <img src="assets/images/banner3.jpeg" alt="Course #3">
             <div class="down-content">
               <h4>Avanzado</h4>
-              <p>"Perfecciona tu inglés con nuestro curso avanzado. Desarrolla habilidades para debatir, redactar documentos formales y comprender textos complejos. Domina el idioma en contextos profesionales y académicos, alcanzando un nivel de fluidez excepcional."
+              <p>"Perfecciona tu inglés con nuestro curso avanzado. Desarrolla habilidades para debatir, redactar
+                documentos formales y comprender textos complejos. Domina el idioma en contextos profesionales y
+                académicos, alcanzando un nivel de fluidez excepcional."
               </p>
-              
+
               <div class="text-button-pay">
                 <a href="#">Cursos<i class="fa fa-angle-double-right"></i></a>
               </div>
@@ -480,8 +361,10 @@ footer .row {
             <img src="assets/images/banner1.jpeg" alt="Course #1">
             <div class="down-content">
               <h4>Principiante</h4>
-              <p>"Inicia tu camino hacia el dominio del inglés con nuestro curso básico. Aprende vocabulario esencial, frases comunes y las bases gramaticales para comunicarte en situaciones cotidianas. Ideal para quienes están empezando desde cero. Contactanos para mas informacion."</p>
-              
+              <p>"Inicia tu camino hacia el dominio del inglés con nuestro curso básico. Aprende vocabulario esencial,
+                frases comunes y las bases gramaticales para comunicarte en situaciones cotidianas. Ideal para quienes
+                están empezando desde cero. Contactanos para mas informacion."</p>
+
               <div class="text-button-pay">
                 <a href="#">Cursos<i class="fa fa-angle-double-right"></i></a>
               </div>
@@ -491,8 +374,10 @@ footer .row {
             <img src="assets/images/banner2.jpeg" alt="Course #2">
             <div class="down-content">
               <h4>Intermedio</h4>
-              <p>"Lleva tu inglés al siguiente nivel. Este curso está diseñado para mejorar tus habilidades de conversación, comprensión y escritura. Aprende a comunicarte con confianza en entornos sociales y laborales mientras amplías tu vocabulario y estructuras gramaticales."</p>
-             
+              <p>"Lleva tu inglés al siguiente nivel. Este curso está diseñado para mejorar tus habilidades de
+                conversación, comprensión y escritura. Aprende a comunicarte con confianza en entornos sociales y
+                laborales mientras amplías tu vocabulario y estructuras gramaticales."</p>
+
               <div class="text-button-free">
                 <a href="#">Cursos<i class="fa fa-angle-double-right"></i></a>
               </div>
@@ -502,9 +387,11 @@ footer .row {
             <img src="assets/images/banner3.jpeg" alt="Course #3">
             <div class="down-content">
               <h4>Avanzado</h4>
-              <p>"Perfecciona tu inglés con nuestro curso avanzado. Desarrolla habilidades para debatir, redactar documentos formales y comprender textos complejos. Domina el idioma en contextos profesionales y académicos, alcanzando un nivel de fluidez excepcional."
+              <p>"Perfecciona tu inglés con nuestro curso avanzado. Desarrolla habilidades para debatir, redactar
+                documentos formales y comprender textos complejos. Domina el idioma en contextos profesionales y
+                académicos, alcanzando un nivel de fluidez excepcional."
               </p>
-              
+
               <div class="text-button-pay">
                 <a href="#">Cursos<i class="fa fa-angle-double-right"></i></a>
               </div>
@@ -515,8 +402,10 @@ footer .row {
             <img src="assets/images/banner1.jpeg" alt="Course #1">
             <div class="down-content">
               <h4>Principiante</h4>
-              <p>"Inicia tu camino hacia el dominio del inglés con nuestro curso básico. Aprende vocabulario esencial, frases comunes y las bases gramaticales para comunicarte en situaciones cotidianas. Ideal para quienes están empezando desde cero. Contactanos para mas informacion."</p>
-              
+              <p>"Inicia tu camino hacia el dominio del inglés con nuestro curso básico. Aprende vocabulario esencial,
+                frases comunes y las bases gramaticales para comunicarte en situaciones cotidianas. Ideal para quienes
+                están empezando desde cero. Contactanos para mas informacion."</p>
+
               <div class="text-button-pay">
                 <a href="#">Cursos<i class="fa fa-angle-double-right"></i></a>
               </div>
@@ -526,8 +415,10 @@ footer .row {
             <img src="assets/images/banner2.jpeg" alt="Course #2">
             <div class="down-content">
               <h4>Intermedio</h4>
-              <p>"Lleva tu inglés al siguiente nivel. Este curso está diseñado para mejorar tus habilidades de conversación, comprensión y escritura. Aprende a comunicarte con confianza en entornos sociales y laborales mientras amplías tu vocabulario y estructuras gramaticales."</p>
-             
+              <p>"Lleva tu inglés al siguiente nivel. Este curso está diseñado para mejorar tus habilidades de
+                conversación, comprensión y escritura. Aprende a comunicarte con confianza en entornos sociales y
+                laborales mientras amplías tu vocabulario y estructuras gramaticales."</p>
+
               <div class="text-button-free">
                 <a href="#">Cursos<i class="fa fa-angle-double-right"></i></a>
               </div>
@@ -537,16 +428,18 @@ footer .row {
             <img src="assets/images/banner3.jpeg" alt="Course #3">
             <div class="down-content">
               <h4>Avanzado</h4>
-              <p>"Perfecciona tu inglés con nuestro curso avanzado. Desarrolla habilidades para debatir, redactar documentos formales y comprender textos complejos. Domina el idioma en contextos profesionales y académicos, alcanzando un nivel de fluidez excepcional."
+              <p>"Perfecciona tu inglés con nuestro curso avanzado. Desarrolla habilidades para debatir, redactar
+                documentos formales y comprender textos complejos. Domina el idioma en contextos profesionales y
+                académicos, alcanzando un nivel de fluidez excepcional."
               </p>
-              
+
               <div class="text-button-pay">
                 <a href="#">Cursos<i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
 
-          
+
         </div>
       </div>
     </div>
@@ -559,8 +452,13 @@ footer .row {
           <div class="left-content">
             <span>El idioma que abre puertas a nuevas oportunidades</span>
             <h4>Por qué aprender <em> inglés</em> es tu mejor decisión</h4>
-            <p>En un mundo globalizado, el inglés es más que un idioma: es una herramienta esencial para crecer personal y profesionalmente. Aprender inglés te abre puertas a mejores oportunidades laborales, te conecta con personas de diferentes culturas y te permite acceder a conocimiento sin límites.
-              <br><br>En EDIE Escuela de Inglés Especializada, te ayudamos a alcanzar tus metas lingüísticas con cursos diseñados para cada nivel, desde principiantes hasta avanzados. Nuestro enfoque práctico-teórico y la guía de profesores calificados garantizan que aprenderás inglés de forma efectiva, para comunicarte con confianza en cualquier situación."
+            <p>En un mundo globalizado, el inglés es más que un idioma: es una herramienta esencial para crecer personal
+              y profesionalmente. Aprender inglés te abre puertas a mejores oportunidades laborales, te conecta con
+              personas de diferentes culturas y te permite acceder a conocimiento sin límites.
+              <br><br>En EDIE Escuela de Inglés Especializada, te ayudamos a alcanzar tus metas lingüísticas con cursos
+              diseñados para cada nivel, desde principiantes hasta avanzados. Nuestro enfoque práctico-teórico y la guía
+              de profesores calificados garantizan que aprenderás inglés de forma efectiva, para comunicarte con
+              confianza en cualquier situación."
             </p>
             <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Mas
                 Informacion</a></div>
@@ -596,106 +494,110 @@ footer .row {
   <section class="section contact" data-section="section6">
     <div class="container">
       <div class="row justify-content-center">
-  
+
         <div class="col-md-12 text-center mb-4">
           <div class="section-heading">
             <h2>Cursos Empresariales</h2>
           </div>
         </div>
-  
+
         <div class="col-md-6 d-flex justify-content-center">
-          
-            <div class="card" style="width: 300px;">
-              <img class="card-img-top mx-auto d-block" src="./assets/images/empresarial.jpg" alt="Card image" style="width: 100%; height: auto; max-height: 300px;">
-              <div class="card-body">
-                <h4 class="card-title"><strong>Ingles Empresarial</strong></h4>
-                <p class="card-text"><strong>Hablar inglés empresarial no solo es una habilidad, es una ventaja competitiva.</strong></p>
-              </div>
+
+          <div class="card" style="width: 300px;">
+            <img class="card-img-top mx-auto d-block" src="./assets/images/empresarial.jpg" alt="Card image"
+              style="width: 100%; height: auto; max-height: 300px;">
+            <div class="card-body">
+              <h4 class="card-title"><strong>Ingles Empresarial</strong></h4>
+              <p class="card-text"><strong>Hablar inglés empresarial no solo es una habilidad, es una ventaja
+                  competitiva.</strong></p>
             </div>
-         
+          </div>
+
         </div>
-  
+
         <div class="col-md-6 d-flex justify-content-center">
-         
-            <div class="card" style="width: 300px;">
-              <img class="card-img-top mx-auto d-block" src="./assets/images/empresarial.jpg" alt="Card image" style="width: 100%; height: auto; max-height: 300px;">
-              <div class="card-body">
-                <h4 class="card-title"><strong>Ingles Empresarial</strong></h4>
-                <p class="card-text"><strong>El éxito profesional comienza con el idioma que conecta negocios: el inglés.</strong></p>
-              </div>
+
+          <div class="card" style="width: 300px;">
+            <img class="card-img-top mx-auto d-block" src="./assets/images/empresarial.jpg" alt="Card image"
+              style="width: 100%; height: auto; max-height: 300px;">
+            <div class="card-body">
+              <h4 class="card-title"><strong>Ingles Empresarial</strong></h4>
+              <p class="card-text"><strong>El éxito profesional comienza con el idioma que conecta negocios: el
+                  inglés.</strong></p>
             </div>
-         
+          </div>
+
         </div>
-  
+
       </div>
     </div>
   </section>
-  
 
-<!-- Footer -->
-<footer class="text-white p-t-75 p-b-32" style="padding: 20px;">
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Logo y enlaces -->
-      <div class="col-sm-6 col-lg-3 p-b-50 text-center">
-        <h4 class="stext-301 cl0 p-b-30">
-          <img src="./assets/images/file2.png" style="height: 80px;">
-        </h4>
-        <ul class="list-unstyled">
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04 text-white">Escuela</a>
-          </li>
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04 text-white">De Inglés</a>
-          </li>
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04 text-white">Especializada</a>
-          </li>
-        </ul>
-      </div>
 
-      <!-- Contacto -->
-      <div class="col-sm-6 col-lg-3 p-b-50" style="padding:30px;">
-        <h4 class="stext-301 cl0 p-b-30 text-white"></h4>
-        <ul class="list-unstyled">
-          <li class="p-b-10">¿Tienes dudas o preguntas?</li>
-          <li class="p-b-10"><strong>664 123 4567</strong></li>
-          <li class="p-b-10">No dudes en contactarnos. <br>Lunes a Sabado 1-8pm</li>
-        </ul>
-      </div>
-
-      <!-- Mapa -->
-      <div class="col-sm-6 col-lg-3 p-b-50">
-        <h4 class="stext-301 cl0 p-b-30 text-white" style="padding: 10px;">Ubicación</h4>
-        <div class=" col-md-12 embed-responsive-16by9">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.9139617585284!2d-116.95994329673924!3d32.4902985937591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d93940cdada191%3A0x6304e12430059076!2sOld%20Souls%20Restaurante%20y%20M%C3%BAsica!5e0!3m2!1ses!2smx!4v1732057364801!5m2!1ses!2smx"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            width="80%" height="100px" frameborder="0" style="border:0;" allowfullscreen></iframe>
+  <!-- Footer -->
+  <footer class="text-white p-t-75 p-b-32" style="padding: 20px;">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Logo y enlaces -->
+        <div class="col-sm-6 col-lg-3 p-b-50 text-center">
+          <h4 class="stext-301 cl0 p-b-30">
+            <img src="./assets/images/file2.png" style="height: 80px;">
+          </h4>
+          <ul class="list-unstyled">
+            <li class="p-b-10">
+              <a href="#" class="stext-107 cl7 hov-cl1 trans-04 text-white">Escuela</a>
+            </li>
+            <li class="p-b-10">
+              <a href="#" class="stext-107 cl7 hov-cl1 trans-04 text-white">De Inglés</a>
+            </li>
+            <li class="p-b-10">
+              <a href="#" class="stext-107 cl7 hov-cl1 trans-04 text-white">Especializada</a>
+            </li>
+          </ul>
         </div>
-      </div>
 
-      <!-- Redes sociales -->
-      <div class="col-sm-6 col-lg-3 p-b-50">
-        <h4 class="stext-301 cl0 p-b-30 text-white" style="padding: 10px;">Contáctanos</h4>
-        <div class="mb-3">
-          <button type="button" class="btn btn-success w-70">WhatsApp</button>
+        <!-- Contacto -->
+        <div class="col-sm-6 col-lg-3 p-b-50" style="padding:30px;">
+          <h4 class="stext-301 cl0 p-b-30 text-white"></h4>
+          <ul class="list-unstyled">
+            <li class="p-b-10">¿Tienes dudas o preguntas?</li>
+            <li class="p-b-10"><strong>664 123 4567</strong></li>
+            <li class="p-b-10">No dudes en contactarnos. <br>Lunes a Sabado 1-8pm</li>
+          </ul>
         </div>
-        <div style="padding: 10px;">
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
-            <i class="fa fa-facebook" style="padding: 10px;"></i>
-          </a>
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
-            <i class="fa fa-instagram" style="padding: 10px;"></i>
-          </a>
-          
+
+        <!-- Mapa -->
+        <div class="col-sm-6 col-lg-3 p-b-50">
+          <h4 class="stext-301 cl0 p-b-30 text-white" style="padding: 10px;">Ubicación</h4>
+          <div class=" col-md-12 embed-responsive-16by9">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.9139617585284!2d-116.95994329673924!3d32.4902985937591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d93940cdada191%3A0x6304e12430059076!2sOld%20Souls%20Restaurante%20y%20M%C3%BAsica!5e0!3m2!1ses!2smx!4v1732057364801!5m2!1ses!2smx"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="80%" height="100px" frameborder="0"
+              style="border:0;" allowfullscreen></iframe>
+          </div>
         </div>
+
+        <!-- Redes sociales -->
+        <div class="col-sm-6 col-lg-3 p-b-50">
+          <h4 class="stext-301 cl0 p-b-30 text-white" style="padding: 10px;">Contáctanos</h4>
+          <div class="mb-3">
+            <a href="#" class="external"><img src="./assets/images/WhatsappLogo.png" style="height:40px;"></a>
+          </div>
+          <div style="padding: 10px;">
+            <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
+              <i class="fa fa-facebook" style="padding: 10px;"></i>
+            </a>
+            <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16 text-white">
+              <i class="fa fa-instagram" style="padding: 10px;"></i>
+            </a>
+
+          </div>
+        </div>
+
+
       </div>
-      
-      
     </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
@@ -708,16 +610,16 @@ footer .row {
     });
   </script>
 
-<script>
-  const slides = document.querySelectorAll('.carousel-slide');
-  let currentSlide = 0;
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
 
-  setInterval(() => {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }, 6000); // Cambia cada 7 segundos
-</script>
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000); // Cambia cada 5 segundos
+  </script>
 
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
@@ -726,7 +628,7 @@ footer .row {
   <script src="assets/js/video.js"></script>
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
-  
+
 </body>
 
 </html>

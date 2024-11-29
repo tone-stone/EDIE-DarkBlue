@@ -1,0 +1,128 @@
+  /* Configuración general */
+  .left-text,
+  .right-text {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+  }
+
+  /* Animaciones */
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Aplicación de las animaciones */
+  .left-text {
+    animation: slideInLeft 1.5s ease-out forwards;
+  }
+
+  .right-text {
+    animation: slideInRight 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+    /* Para que aparezca un poco después */
+  }
+
+  /* Clase base para animar */
+  .animate-logo {
+   
+    /* Inicia invisible */
+    transform: translateY(50px);
+    /* Posicionado 50px abajo */
+    transition: all 2s ease-in-out;
+    /* Duración y suavidad */
+  }
+
+  /* Estado activo cuando la animación comienza */
+  .animate-logo.active {
+    opacity: 1;
+    /* Aparece */
+    transform: translateY(0);
+    /* Se mueve a su posición original */
+  }
+
+
+  .section.contact {
+padding: 40px 0;
+}
+
+.section-heading {
+margin-bottom: 20px;
+}
+
+.card {
+text-align: center;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+max-width: 100%;
+max-height: 200px; /* Ajusta el tamaño máximo de la imagen */
+object-fit: cover; /* Asegura que la imagen se adapte correctamente */
+}
+
+.card-body {
+padding: 15px;
+}
+
+.row.justify-content-center {
+display: flex;
+justify-content: center;
+}
+
+
+  footer .row {
+  margin: 0; /* Elimina márgenes del row */
+  padding: 0; /* Elimina padding del row */
+}
+
+footer .col-sm-6 {
+  padding: 20px; /* Agrega un padding interno a las columnas si es necesario */
+}
+
+footer {
+width: 100%; /* Asegura que el footer ocupe todo el ancho */
+}
+
+footer .row {
+width: 100%; /* Asegura que el row ocupe todo el ancho */
+}
+
+.custom-carousel {
+position: relative;
+overflow: hidden;
+height: 100%;
+}
+
+.carousel-slide {
+position:center;
+top: 0;
+left: 100%;
+width: 100%;
+opacity: 0;
+transition: all 1s ease-in-out;
+}
+
+.carousel-slide.active {
+left: 0;
+opacity: 1;
+}
